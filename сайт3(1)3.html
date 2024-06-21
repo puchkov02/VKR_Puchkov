@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информационное взаимодействие</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #c00;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #e00;
+            overflow: hidden;
+        }
+        nav a {
+            display: inline-block;
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background-color: #a00;
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #c00;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            var sections = document.getElementsByClassName('content-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.add('hidden');
+            }
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function showTextVersion() {
+            document.getElementById('text-version').classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Информационное взаимодействие органов исполнительной власти</h1>
+    </header>
+    <nav>
+        <a onclick="showContent('home')">Главная</a>
+        <a onclick="showContent('news')">Новости</a>
+        <a onclick="showContent('multimedia')">Мультимедиа</a>
+    </nav>
+    <div class="content">
+        <div id="home" class="content-section">
+            <h2>Главная</h2>
+            <p>Данная платформа создана студентом 4 курса группы 20ГМУ-УИР11 Пучковым Юрием c целью повышения эффективности информационного взаимодействия органов исполнительной власти с населением города Москвы.</p>
+        </div>
+        <div id="news" class="content-section hidden">
+            <h2>Новости</h2>
+            <p>25.06.2024 прямая линия с главой управы района Текстильщики.</p>
+            <p>28.06.2024 прямая линия с руководителем Департамента информационных технологий.</p>
+            <p>28.06.2024 прямая линия с руководителем Департамента территориальных органов исполнительной власти.</p>
+            <p>02.07.2024 прямая линия с префектом ЮВАО.</p>
+            <p>05.07.2024 прямая линия с префектом ВАО.</p>
+        </div>
+        <div id="multimedia" class="content-section hidden">
+            <h2>Мультимедиа</h2>
+            <p>Запись встречи префекта ЮВАО с населением 27.05.2015 доступна по <a href="https://youtu.be/7dYeRrGy8Wg?si=o0K4trVA8xPNvoZ3" target="_blank">ссылке</a>. <a href="#" onclick="showTextVersion()">Текстовая версия</a></p>
+            <div id="text-version" class="hidden">
+                <p>Уважаемые жители Юго-Восточного округа, ...</p>
+            </div>
+            <p>Запись встречи главы управы района Текстильщики с населением 21.09.2016 доступна по <a href="https://youtu.be/7dYeRrGy8Wg?si=o0K4trVA8xPNvoZ3" target="_blank">ссылке</a>.</p>
+            <p>Запись встречи главы управы района Ростокино с населением 18.10.2017 доступна по <a href="https://youtu.be/mDqqglByKPc?si=Q2AH7SrsLZf0q-B4" target="_blank">ссылке</a>.</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Информационное взаимодействие органов исполнительной власти. Пучков Юрий
+    </footer>
+</body>
+</html>
